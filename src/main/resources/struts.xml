@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd"> 
+<struts>
+<package name ="default" namespace="/tutorials" extends ="struts-default">	
+	<action name="getTutorial" class="com.deep.struts.action.TutorialAction" method="execute">
+		<result name="success">/Success.jsp</result>
+		<result name="error">/Error.jsp</result>
+	</action>
+</package>
+
+<package name ="login" namespace="/logins" extends ="struts-default">	
+	
+	<action name="Login" class="com.deep.struts.action.loginAction" method="execute">
+		<result name="Admin">/pages/admin/adminHome.jsp</result>
+		<result name="Developer">/pages/developer/developerHome.jsp</result>
+		<result name="Manager">/pages/manager/managerHome.jsp</result>
+		<result name="HR">/pages/developer/hrHome.jsp</result>
+		<result name="Error">/index.jsp</result>
+	</action>
+	
+	<action name="register" class="com.deep.struts.action.loginAction" method="register">
+		<result name="Success">/index.jsp</result>
+		<result name="Error">/Error.jsp</result>
+	</action>
+	
+	<action name="managerCreateProject" >
+		<result>/pages/manager/createProject.jsp</result>
+	</action>
+	
+	<action name="createProject" class="com.deep.struts.action.ManagerAction" method="execute">
+		<result name="Success">/pages/manager/managerHome.jsp</result>
+		<result name="Error">/pages/manager/managerHome.jsp</result>
+	</action>
+	
+	
+	<action name="managerFillDetailsDummy">
+		<result >/pages/manager/fillDetails.jsp</result>
+	</action>
+	
+	
+	<action name="managerFillDetails" class="com.deep.struts.action.ManagerAction" method="fillDetails">
+		<result name="Success">/pages/manager/managerHome.jsp</result>
+		<result name="Error">/pages/manager/managerHome.jsp</result>
+	</action>
+		
+	<action name="managerDeleteProject" class="com.deep.struts.action.ManagerAction" method ="managerShowProjectList">
+		<result name="Success">/pages/manager/deleteProject.jsp</result>
+	</action>
+	
+	<action name="deleteProject" class="com.deep.struts.action.ManagerAction" method ="deleteProject">
+		<result name="Success">/pages/manager/managerHome.jsp</result>
+	</action>
+	
+	<action name="managerAddEmployee" class="com.deep.struts.action.ManagerAction" method="managerShowEmployee">
+		<result name="Success">/pages/manager/addEmployee.jsp</result>
+	</action>
+	
+	<action name="addEmployee" class="com.deep.struts.action.ManagerAction" method="managerAddEmployee">
+		<result name="Success">/pages/manager/managerHome.jsp</result>
+	</action>
+	
+	
+	
+	<action name="managerShowDetails" class="com.deep.struts.action.ManagerAction" method="managerShowDetails">
+		<result name="Success">/pages/manager/showDetails.jsp</result>
+	</action>
+	
+	<action name="managerContactUs">
+		<result>/pages/manager/dummy.jsp</result>
+	</action>
+	
+	
+</package>
+
+</struts> 

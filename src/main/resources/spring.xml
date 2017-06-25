@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   <bean id="UserLogin" class="com.revolution.raipur.jerseystart.models.UserLogin"/>
+   <bean id="Admin" class="com.revolution.raipur.jerseystart.models.Admin"/>
+   <bean id="Developer" class="com.revolution.raipur.jerseystart.models.Developer"/>
+   <bean id="Employee" class="com.revolution.raipur.jerseystart.models.Employee"/>
+   <bean id="HR" class="com.revolution.raipur.jerseystart.models.HR"/>
+    <bean id="Project" class="com.revolution.raipur.jerseystart.models.Project"/>
+   <bean id="Manager" class="com.revolution.raipur.jerseystart.models.Manager"/>
+   <bean id="loginService" class="com.revolution.raipur.jerseystart.service.LoginService"/>
+   <bean id="ManagerService" class="com.revolution.raipur.jerseystart.service.ManagerService"/>
+   <bean id="LoginDao" class="com.revolution.raipur.jerseystart.dao.impl.LoginDaoImpl"/>
+   <bean id="ManagerDao" class="com.revolution.raipur.jerseystart.dao.impl.ManagerDaoImpl"/>
+</beans>
